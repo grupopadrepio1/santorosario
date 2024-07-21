@@ -1,0 +1,234 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Luckiest+Guy&family=Pacifico&family=Righteous&display=swap');
+
+/* Estilos Globais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8ea7be;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto; /* Para centralizar o elemento */
+    background-color: #898d6f; /* Cor de fundo do elemento principal */
+    padding: 20px; /* Espaçamento interno para destacar o conteúdo */
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 10px; /* Reduzir padding em telas menores */
+    }
+}
+
+/* Estilos do Header */
+.header {
+    width: 100%;
+    height: 25vh;
+    background-color: #333; /* Cor de fundo do header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(19, 26, 122);
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 3.5em;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), /* Sombra leve */
+    -1px -1px 0 #fff, 1px -1px 0 #fff, /* Chanfro superior */
+    -1px 1px 0 #fff, 1px 1px 0 #fff; /* Chanfro inferior */
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 20px 0;
+        justify-content: center; /* Centraliza o conteúdo do header verticalmente */
+    }
+
+    .title {
+        font-size: 2.5em; /* Reduzir tamanho da fonte em telas menores */
+        text-align: center; /* Garante que o texto do título esteja centralizado */
+    }
+}
+
+.menu {
+    font-family: Franklin Gothic;
+    font-size: 0.9em;
+    display: flex;
+    gap: 10px; /* Espaçamento horizontal entre os botões */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.Btn {
+    width: 140px;
+    height: 40px;
+    border: none; /* Remover borda padrão do botão */
+    border-radius: 10px;
+    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #000000;
+    text-decoration: none; /* Remover sublinhado dos links */
+    display: inline-block; /* Garantir que o botão se comporte como um bloco de texto */
+    text-align: center; /* Centralizar texto dentro do botão */
+    line-height: 40px; /* Alinhar verticalmente o texto */
+    cursor: pointer;
+    transition: background-position 1s, transform 0.2s;
+    overflow: hidden;
+}
+
+.Btn:hover {
+    background-position: right;
+}
+
+.Btn:hover::before {
+    background-position: right;
+}
+
+.Btn:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Btn {
+        width: 100%; /* Botões ocupam toda a largura do contêiner */
+    }
+}
+
+/* Estilos do Corpo */
+.corpo {
+    width: 80%;
+    margin: auto;
+    padding: 1.5em;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+@media (max-width: 768px) {
+    .corpo {
+        width: 95%;
+        padding: 1em; /* Reduzir padding em telas menores */
+    }
+}
+
+.titulomist {
+    text-align: center;
+    font-family: Righteous;
+    font-size: larger;
+    color: #000000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), /* Sombra leve */
+    -1px -1px 0 #fff, 1px -1px 0 #fff, /* Chanfro superior */
+    -1px 1px 0 #fff, 1px 1px 0 #fff; /* Chanfro inferior */
+}
+
+@media (max-width: 768px) {
+    .titulomist {
+        font-size: medium; /* Reduzir tamanho da fonte em telas menores */
+    }
+}
+
+.conteudo {
+    overflow: hidden; /* Limpa o float para garantir que o conteúdo flua corretamente */
+}
+
+.imagem {
+    float: left;
+    margin-right: 1em; /* Adiciona margem à direita para separar a imagem do texto */
+}
+
+.imgmist {
+    width: 40vh;
+    height: auto;
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do seu contêiner */
+    display: block; /* Remove margens indesejadas em volta da imagem */
+    margin: auto; /* Centraliza horizontalmente */
+}
+
+@media (max-width: 768px) {
+    .imagem {
+        float: none; /* Remove float em telas menores */
+        display: block;
+        margin: auto; /* Centraliza a imagem */
+    }
+
+    .imgmist {
+        width: auto; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    }
+}
+
+.CIC {
+    color: rgb(255, 255, 255);
+    font-family: Trebuchet MS, sans-serif;
+    font-size: larger;
+}
+
+@media (max-width: 768px) {
+    .CIC {
+        font-size: medium; /* Reduzir tamanho da fonte em telas menores */
+    }
+}
+
+/* Estilos do Footer */
+footer {
+    height: 16vh;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 14vh; /* Ajuste este valor conforme necessário para manter a imagem pequena */
+    height: auto;
+}
+
+.disclaimer {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .disclaimer {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+/* Destaques Textuais */
+.highlight {
+    font-size: 0.9em; /* Tamanho da fonte menor que o padrão */
+    font-weight: bold; /* Torna o texto em negrito */
+    color: #3f3f2f; /* Cor do texto (vermelho, por exemplo) */
+    font-style: italic;
+}
